@@ -4,7 +4,7 @@ This project is made in Unity 3D 2018.1.6f1
 To play test the project you can download the Release version and run it.
 The game has no controls. You can click on an agent with the mouse to see what parameters it has. 
 
-![[EvolutionSimulator.gif]]
+![Demo](EvolutionSimulator.gif)
 
 Characteristics of each agent type:
 	Herbivores
