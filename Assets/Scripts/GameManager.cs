@@ -218,13 +218,13 @@ public class GameManager: MonoBehaviour {
     public void SpawnFirstPlayers() { //This function is used to spawn the initial players set by the user
         Vector2 position = new Vector2(Random.Range(xMin, xMax), Random.Range(yMin, yMax));
         //playerPrefab = playerPrefabs[Random.Range(0, playerPrefabs.Length)];
-        if (number < 5) {
+        if ((number % 2) == 0) {
             newPlayer = Instantiate(playerPrefabs[0], position, transform.rotation);
             newPlayer.GetComponent<PlayerController>().initialPlayers = true;
             newPlayer.GetComponent<PlayerController>().SetupInitialPlayers();
             SetNewParent(newPlayer, herbivoreParentObject);
             number += 1;
-        } else if (number >= 5) {
+        } else {
             newPlayer = Instantiate(playerPrefabs[1], position, transform.rotation);
             newPlayer.GetComponent<PlayerController>().SetupInitialPlayers();
             SetNewParent(newPlayer, carnivoreParentObject);
